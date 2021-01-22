@@ -1,0 +1,296 @@
+html {
+    font-size: 62.5%;
+  }
+  *
+  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  a {
+    text-decoration: none;
+  }
+  @mixin size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  @mixin flexCen($align, $just, $wrap, $direct) {
+    display: flex;
+    align-items: $align;
+    justify-content: $just;
+    flex-wrap: $wrap;
+    flex-direction: $direct;
+  }
+
+  .container
+  {
+      // background-image: url("https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      .work
+      {
+          width: 41.5rem;
+          height: 31rem;
+          background-color: rgb(255,255,255);
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          border-radius: 1rem;
+          box-shadow: 1px 1px 7px 0px black;
+          &__top
+          {
+              display: flex;
+              flex-direction: column;
+            //   position: absolute;
+            //   top:5%;
+            //   left:20%;
+            //   transform: translate(-20%,-5%);
+            // background-color: red;
+            padding: 2.5rem 0 0 3rem;
+              .title
+              {
+                  color: rgb(62,177,170);
+                  font-size: 1.6rem;
+                  padding-bottom: 2rem;
+              }
+              .info
+              {
+                  color:rgb(209,225,128);
+                  font-size: 1.1rem;
+                  padding-bottom: 1.5rem;
+              }
+              .content
+              {
+                  color:rgb(176,179,154);
+                  font-weight: 500;
+                  font-size: 1rem;
+                  padding-bottom: 3rem;
+              }
+          }
+          &__bottom
+          {
+            display: flex;
+            flex-direction: row;
+              &-left
+              {
+                width: 21rem;
+                height: calc(31rem - 13.66rem);
+                background-color: rgb(43,179,177);
+                // border-left:1px solid rgb(43,179,177);
+                border-radius: 0 0 0 1rem;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                padding-left: 3.1rem;
+                .subcriber-month
+                {
+                    color:rgb(217,255,255);
+                    font-size: 1.2rem;
+                }
+                .price
+                {
+                  //  background-color: yellow;
+                  position: relative;
+                    span:first-child
+                    {
+                        font-size: 1.6rem;
+                        color:white;
+                    }
+                    .month
+                    {
+                        position: absolute;
+                        color:rgb(114,222,224);
+                        top:40%;
+                        left:25%;
+                        transform: translate(-25%,-40%);
+                    }
+                }
+                p
+                {
+                  color:white;
+                }
+                button
+                {
+                    @include size(14.8rem,3rem);
+                    background-color: rgb(171,196,84);
+                    outline: none;
+                    border-radius: 0.5rem;
+                    border:0.2px solid transparent;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    color:white;
+                }
+              }
+              &-right
+              {
+                background-color: rgb(74,190,189);
+                display: flex;
+                flex-direction: column;
+                width: 21rem;
+                border-radius: 0 0 1rem 0;
+                
+                .reason
+                {
+                  color:rgb(241,255,255);
+                  margin: 2.5rem 0 0 2.5rem;
+                  font-size: 1.3rem;
+                }
+                p
+                {
+                  color:rgb(241,255,255);
+                  margin:1.3rem 0 0 2.5rem;
+                  line-height: 1.4;
+                }
+              }
+          }
+      }
+  }
+
+  @media screen and (max-width:767px)
+  {
+    .container
+    {
+        // background-image: url("https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+        // background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        .work
+        {
+            width: 14rem;
+            height: 32rem;
+            background-color: rgb(255,255,255);
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border-radius: 1rem;
+            box-shadow: 1px 1px 7px 0px black;
+            &__top
+            {
+                display: flex;
+                flex-direction: column;
+              //   position: absolute;
+              //   top:5%;
+              //   left:20%;
+              //   transform: translate(-20%,-5%);
+              // background-color: red;
+              padding: 1.4rem 1.3rem 0 1.3rem;
+                .title
+                {
+                    color: rgb(62,177,170);
+                    font-size: 1.2rem;
+                    padding-bottom: 1rem;
+                }
+                .info
+                {
+                    color:rgb(209,225,128);
+                    font-size: 1rem;
+                    padding-bottom: 1.5rem;
+                }
+                .content
+                {
+                    color:rgb(176,179,154);
+                    font-weight: 500;
+                    font-size: 0.7rem;
+                    padding-bottom: 3rem;
+                }
+            }
+            &__bottom
+            {
+              display: flex;
+              flex-direction: column;
+                &-left
+                {
+                  width: 14rem;
+                  height: 10rem;
+                  background-color: rgb(43,179,177);
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  justify-content: space-evenly;
+                  padding-left: 1.2rem;
+                  border-bottom-left-radius: 0rem;
+                  .subcriber-month
+                  {
+                      color:rgb(217,255,255);
+                      font-size: 1rem;
+                  }
+                  .price
+                  {
+                    //  background-color: yellow;
+                    position: relative;
+                      span:first-child
+                      {
+                          font-size: 1.3rem;
+                          color:white;
+                      }
+                      .month
+                      {
+                          position: absolute;
+                          color:rgb(114,222,224);
+                          top:40%;
+                          left:25%;
+                          transform: translate(-25%,-40%);
+                      }
+                  }
+                  p
+                  {
+                    color:white;
+                    font-size: 0.8rem;
+                  }
+                  button
+                  {
+                      @include size(12rem,2.2rem);
+                      background-color: rgb(171,196,84);
+                      outline: none;
+                      border-radius: 0.5rem;
+                      border:0.2px solid transparent;
+                      cursor: pointer;
+                      font-size: 0.9rem;
+                      color:white;
+                  }
+                }
+                &-right
+                {
+                  background-color: rgb(74,190,189);
+                  display: flex;
+                  flex-direction: column;
+                  width: 14rem;
+                  height: 9.28rem;
+                  border-radius: 0 0 1rem 1rem;
+                  
+                  .reason
+                  {
+                    color:rgb(241,255,255);
+                    margin: 1.5rem 0 0 1.5rem;
+                    font-size: 1rem;
+                  }
+                  p
+                  {
+                    color:rgb(241,255,255);
+                    margin:0.6rem 0 0 1.5rem;
+                    font-size: 0.8rem;
+                    line-height: 0.9;
+                  }
+                }
+            }
+        }
+    }
+  }
